@@ -1,0 +1,23 @@
+<div class="row" [ngClass]="{'completed': item.completed}">
+    <div class="item">
+        <img src="/assets/item.png" alt="image">
+    </div>
+    <div class="title">
+        {{ item.title }}
+    </div>
+    <div class="price">
+        {{ item.price | currency}}
+    </div>
+    <div class="quantity">
+        x{{ item.quantity }}
+    </div>
+    <div class="total">
+        {{ (item.price * item.quantity) | currency}}
+    </div>
+    <div class="actions">
+        <input id="done" type="checkbox" title="Mark as bought" [checked]="item.completed" (change)="onToggle(item)">
+    </div>
+    <div class="actions">
+        <img src="/assets/delete.png" alt="done" title="Delete" (click)="onDelete(item)">
+    </div>
+</div>

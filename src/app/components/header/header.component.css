@@ -1,0 +1,15 @@
+.header {
+    height: 64px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+h1 {
+    font: 500 20px/32px Roboto, Helvetica Neue, sans-serif;
+    font-weight: bolder;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 15px;
+}

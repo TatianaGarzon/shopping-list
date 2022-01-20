@@ -1,0 +1,10 @@
+<div class="main-container">
+    <div class="topbar"></div>
+    <div class="child-container">
+        <a routerLink="/add" title="Agregar producto">+</a>
+        <app-total mensaje="Total to pay: " [total]="total"></app-total>
+        <app-item *ngFor="let item of items" [item]="item" (deleteItem)="deleteItem($event)" (toggleItem)="toggleItem($event)">
+        </app-item>
+    </div>
+    <div class="topbar"></div>
+</div>

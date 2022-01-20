@@ -1,0 +1,52 @@
+<!-- <form action="" (ngSubmit)="onSubmit()">
+    <h2>Add item</h2>
+
+    <div>
+        <input type="text" placeholder="Item" name="title" [(ngModel)]="title">
+    </div>
+
+    <div>
+        <input type="number" placeholder="Price" name="price" [(ngModel)]="price">
+    </div>
+
+    <div>
+        <input type="number" placeholder="Quantity" name="quantity" [(ngModel)]="quantity">
+    </div>
+
+    <input type="submit" value="Add"><br>
+    <a routerLink="/">Cancel</a>
+</form> -->
+
+<div class="container">
+    <h2>Add Item</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-25">
+                <label for="title">Item</label>
+            </div>
+            <div class="col-75">
+                <input type="text" placeholder="Item" name="title" [(ngModel)]="title">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="price">Price</label>
+            </div>
+            <div class="col-75">
+                <input type="number" placeholder="Price" name="price" [(ngModel)]="price">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="quantity">Quantity</label>
+            </div>
+            <div class="col-75">
+                <input type="number" placeholder="Quantity" name="quantity" [(ngModel)]="quantity">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <input type="submit" value="Add"><button routerLink="/">Cancel</button>
+        </div>
+    </form>
+</div>

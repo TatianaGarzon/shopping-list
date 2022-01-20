@@ -1,0 +1,31 @@
+.child-container {
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.main-container {
+    width: 100%;
+    background-color: #fafafa;
+    margin: 0px;
+}
+
+.topbar {
+    height: 20px;
+    background-color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+    font-size: 40px;
+    background-color: #fafafa;
+    border-radius: 50px;
+    padding: 5px 15px;
+    color: gray;
+}
+
+a:hover {
+    background-color: #EAE8E8;
+    color: gray;
+}
