@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from '../models/item';
 import { HttpClient } from "@angular/common/http";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
 
-  url:string = 'http://localhost:3000/items';
+
   httpOptions = {
     headers:{
       'Content-Type': 'application/json'
@@ -42,20 +43,20 @@ export class ItemService {
 
   getItems():Observable<Item[]>{
     // return this.items;
-    return this.http.get<Item[]>(this.url);
+    return this.http.get<Item[]>(environment.api);
   }
 
   addItem(item:Item):Observable<Item>{
     // this.items.unshift(item);
-    return this.http.post<Item>(this.url, item, this.httpOptions); 
+    return this.http.post<Item>(environment.api, item, this.httpOptions); 
   }
 
   toggleItem(item:Item):Observable<Item>{
     console.log(item.id);
-    return this.http.put<Item>(this.url + "/" + item.id, item, this.httpOptions);
+    return this.http.put<Item>(environment.api + "/" + item.id, item, this.httpOptions);
   }
 
   deleteItem(item:Item):Observable<Item>{
-    return this.http.delete<Item>(this.url + "/" + item.id);
+    return this.http.delete<Item>(environment.api + "/" + item.id);
   }
 }
