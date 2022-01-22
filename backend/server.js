@@ -59,6 +59,6 @@ async function open() {
 
 
 
-app.listen(443, () => {
+app.listen(process.env.PORT, () => {
     console.log('servidor iniciado...');
 });

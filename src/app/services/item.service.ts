@@ -43,20 +43,20 @@ export class ItemService {
 
   getItems():Observable<Item[]>{
     // return this.items;
-    return this.http.get<Item[]>(environment.api);
+    return this.http.get<Item[]>(environment.api + "/items/");
   }
 
   addItem(item:Item):Observable<Item>{
     // this.items.unshift(item);
-    return this.http.post<Item>(environment.api, item, this.httpOptions); 
+    return this.http.post<Item>(environment.api + "/items", item, this.httpOptions); 
   }
 
   toggleItem(item:Item):Observable<Item>{
     console.log(item.id);
-    return this.http.put<Item>(environment.api + "/" + item.id, item, this.httpOptions);
+    return this.http.put<Item>(environment.api + "/items/" + item.id, item, this.httpOptions);
   }
 
   deleteItem(item:Item):Observable<Item>{
-    return this.http.delete<Item>(environment.api + "/" + item.id);
+    return this.http.delete<Item>(environment.api + "/items/" + item.id);
   }
 }
