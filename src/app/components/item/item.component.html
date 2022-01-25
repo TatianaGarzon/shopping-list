@@ -6,13 +6,13 @@
         {{ item.title }}
     </div>
     <div class="price">
-        {{ item.price | currency}}
+        {{ item.price | currency : 'USD' : 'symbol' : '1.0-0'}}
     </div>
     <div class="quantity">
         x{{ item.quantity }}
     </div>
     <div class="total">
-        {{ (item.price * item.quantity) | currency}}
+        {{ (item.price * item.quantity) | currency : 'USD' : 'symbol' : '1.0-0'}}
     </div>
     <div class="actions">
         <input id="done" type="checkbox" title="Mark as bought" [checked]="item.completed" (change)="onToggle(item)">
